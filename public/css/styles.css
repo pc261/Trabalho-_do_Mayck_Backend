@@ -1,3 +1,6 @@
+@import url('./styles.css');
+
+
 /* Reset básico */
 body, h1, h2, h3, ul, li, a {
     margin: 0;
@@ -10,12 +13,37 @@ body, h1, h2, h3, ul, li, a {
 header {
     background-color: #333;
     color: white;
-    padding: 1rem 0;
-    text-align: center;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction:row;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+#add_livros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-header h1 {
+#m_titulo_header{
     margin-bottom: 0.5rem;
+    margin-right: 5rem;
+    font-family: 'Playpen Sans', cursive;
+    font-style: italic;
+}
+#adicionar_livros{
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    margin-bottom: 1rem;
+}
+
+#pós_adicionar_livros{
+    display: flex;
+    flex-direction: row;
+    gap: 2.7rem;
 }
 
 /* Estilização do menu */
@@ -23,7 +51,6 @@ nav ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
-    gap: 1rem;
 }
 
 nav li {
@@ -43,7 +70,12 @@ nav a:hover {
 
 /* Estilo do conteúdo principal */
 main {
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    text-align: center ;
 }
 
 /* Estilo para ocultar elementos */
@@ -111,8 +143,8 @@ main {
     background: none;
     border: none;
     cursor: pointer;
-    color: #007BFF; /* Cor do ícone */
-    font-size: 1.2rem; /* Tamanho do ícone */
+    color: rgb(141, 141, 141); /* Cor do ícone */
+    font-size: 1.5rem; /* Tamanho do ícone */
     transition: color 0.3s;
 }
 

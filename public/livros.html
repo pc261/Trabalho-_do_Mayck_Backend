@@ -12,31 +12,33 @@
 
 <body>
     <header>
+        <h1 id="m_titulo_header">Livros</h1>
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/livros.html">Livros</a></li>
             </ul>
         </nav>
-        <h1>Livros</h1>
     </header>
 
-    <main>
-<h2>Lista de Livros</h2>
-<button class="icon-btn" id="addBookBtn">
-    <i class="fas fa-plus"></i> Adicionar
-</button>
-    <table>
-        <thead>
-            <tr>
-                <th>Título</th>
-                <th>Autor</th>
-                <th>Data de Publicação</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody id="listaLivros"></tbody>
-    </table>
+    <main id="add_livros">
+        <div id="adicionar_livros">
+            <h2>Lista de Livros</h2>
+            <button class="icon-btn" id="addBookBtn">
+                <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+        </div>
+        
+        <table>
+            <thead>
+                <tr id="pós_adicionar_livros">
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Publicação</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="listaLivros"></tbody>
+        </table>
     </main>
 
     <!-- Popup para Adicionar/Atualizar Livro -->
