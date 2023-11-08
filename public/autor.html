@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
+    <title>Autor</title>
+</head>
+<body>
+    <header>
+        <h1 id="m_titulo_header">Autores</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/livros.html">Livros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   <main>
+        <div id="adicionar_livros">
+            <h2>Lista de Autores</h2>
+            <button class="icon-btn" id="addBookBtn">
+                <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+        </div>
+        
+        <table>
+            <thead>
+                <tr id="pós_adicionar_livros">
+                    <th>Autor</th>
+                </tr>
+            </thead>
+            <tbody id="listaLivros="></tbody>
+        </table>
+
+        <div id="bookPopup" class="hidden">
+            <form id="bookForm">
+                <h3>Adicionar/Atualizar Autor</h3>
+                <input type="hidden" id="id_livro">
+                <input type="text" id="autor" placeholder="Autor" required>
+                <button type="submit">Salvar</button>
+                <button type="button" id="closePopupBtn">Fechar</button>
+            </form>
+        </div>
+
+        <script src="/js/app.js"></script>
+        <script src="/js/livros.js"></script>
+   </main>
+
+</body>
+</html>
