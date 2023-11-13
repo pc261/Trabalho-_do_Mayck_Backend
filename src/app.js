@@ -9,6 +9,7 @@ const PORT = 3000;
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../autor')));
+app.use(express.static(path.join(__dirname, '../editoras')));
 
 app.use('/api/livros', livroRoutes);
 

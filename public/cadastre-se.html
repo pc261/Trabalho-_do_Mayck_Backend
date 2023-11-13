@@ -5,23 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
-    <title>Autor</title>
+    <title>Cadastre-se</title>
 </head>
 <body>
     <header>
-        <h1 id="m_titulo_header">Autores</h1>
+        <h1 id="m_titulo_header">Editoras</h1>
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/livros.html">Livros</a></li>
-                <li><a href="/editoras.html">Editoras</a></li>
             </ul>
         </nav>
     </header>
 
    <main>
         <div id="adicionar_livros">
-            <h2>Lista de Autores</h2>
+            <h2>Lista de Editoras</h2>
             <button class="icon-btn" id="addBookBtn">
                 <i class="fa-solid fa-pen-to-square"></i>
             </button>
@@ -30,7 +29,7 @@
         <table>
             <thead>
                 <tr id="pós_adicionar_livros">
-                    <th>Autor</th>
+                    <th>Editora</th>
                 </tr>
             </thead>
             <tbody id="listaLivros="></tbody>
@@ -38,7 +37,7 @@
 
         <div id="bookPopup" class="hidden">
             <form id="bookForm">
-                <h3>Adicionar/Atualizar Autor</h3>
+                <h3>Adicionar/Atualizar Editoras</h3>
                 <input type="hidden" id="id_livro">
                 <input type="text" id="autor" placeholder="Autor" required>
                 <button type="submit">Salvar</button>
