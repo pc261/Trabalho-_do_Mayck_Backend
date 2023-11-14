@@ -14,26 +14,23 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/livros.html">Livros</a></li>
+                <li><a href="/editoras.html">Editoras</a></li>
             </ul>
         </nav>
     </header>
 
    <main>
-        <div id="adicionar_livros">
-            <h2>Lista de Editoras</h2>
-            <button class="icon-btn" id="addBookBtn">
-                <i class="fa-solid fa-pen-to-square"></i>
-            </button>
+        <div id="cadastro">
+            <h2>Cadastre-se</h2>
+            <label for="Nome_comp">Nome Completo</label>
+            <input type="text" name="Nome_comp" id="Nome_comp" placeholder="Juninho da Pesada">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="juninhoXj6@gmail.com">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" placeholder="********">
+            <input type="date" name="data_nasc" id="data_nasc">
         </div>
         
-        <table>
-            <thead>
-                <tr id="pós_adicionar_livros">
-                    <th>Editora</th>
-                </tr>
-            </thead>
-            <tbody id="listaLivros="></tbody>
-        </table>
 
         <div id="bookPopup" class="hidden">
             <form id="bookForm">

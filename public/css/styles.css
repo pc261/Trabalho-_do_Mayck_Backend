@@ -176,3 +176,14 @@ main {
 .icon-btn.delete:hover {
     color: #b02130; /* Cor vermelha ao passar o mouse */
 }
+
+#cadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+#cadastro label{
+    margin-bottom: -0.7rem;
+}
