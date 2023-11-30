@@ -88,22 +88,23 @@ function carregarAutores() {
       });
     })
     .catch(error => console.error("Erro ao carregar autores:", error));
-  }
+}
   
-  function carregarEditoras() {
+function carregarEditoras() {
     fetch("/api/editoras")
     .then(response => response.json())
     .then(editoras => {
-      const editoraSelect = document.getElementById("editora");
-      editoras.forEach(editora => {
-        const option = document.createElement("option");
-        option.value = editora.id;
-        option.textContent = editora.nome;
-        editoraSelect.appendChild(option);
-      });
+        const editoraSelect = document.getElementById("editora");
+        editoras.forEach(editora => {
+            const option = document.createElement("option");
+            option.value = editora.id;
+            option.textContent = editora.nome;
+            editoraSelect.appendChild(option);
+        });
     })
     .catch(error => console.error("Erro ao carregar editoras:", error));
-  }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     const apiUrl = "/api/livros";
     const bookForm = document.getElementById("bookForm");
