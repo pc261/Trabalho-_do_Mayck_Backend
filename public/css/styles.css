@@ -43,13 +43,18 @@ header {
 #pós_adicionar_livros{
     display: flex;
     flex-direction: row;
-    gap: 4rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
-#listaLivros tr{
+#listaLivros tr,
+#listaEditoras tr,
+#listaAutores tr{
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* Estilização do menu */
