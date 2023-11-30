@@ -6,16 +6,16 @@ async function listarAutores() {
 }
 
 async function adicionarAutor(Autor) {
-  const { nome, biografia, data_nasc } = Autor;
+  const { nome, biografia, dataNascimento } = Autor;
   // Você vai criar o INSERT INTO abaixo.
-  const [results] = await pool.query('INSERT INTO autores (nome, biografia, data_nasc) VALUES (?, ?, ?)', [nome, biografia, data_nasc]);
+  const [results] = await pool.query('INSERT INTO autores (nome, biografia, dataNascimento) VALUES (?, ?, ?)', [nome, biografia, dataNascimento]);
   return results.insertId;
 }
 
 async function atualizarAutor(id, Autor) {
-  const { nome, biografia, data_nasc } = Autor;
+  const { nome, biografia, dataNascimento } = Autor;
   // Você vai criar o UPDATE abaixo.
-  await pool.query('UPDATE autores SET nome = ?, biografia = ?, data_nasc = ? WHERE id = ?', [nome, biografia, data_nasc, id]);
+  await pool.query('UPDATE autores SET nome = ?, biografia = ?, dataNascimento = ? WHERE id = ?', [nome, biografia, dataNascimento, id]);
 }
 
 async function deletarAutor(id) {

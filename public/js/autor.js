@@ -12,7 +12,7 @@ function displayautores(autores) {
         autorCell.textContent = Autor.biografia;
 
         const dataCell = row.insertCell(2);
-        dataCell.textContent = new Date(Autor.data_nasc).toLocaleDateString();
+        dataCell.textContent = new Date(Autor.dataNascimento).toLocaleDateString();
 
         const actionsCell = row.insertCell(3);
         actionsCell.innerHTML = `
@@ -54,11 +54,11 @@ function editarAutor(Autor) {
     const addBookBtn = document.getElementById("addBookBtn");
     const nome= document.getElementById("nome");
     const biografia = document.getElementById("biografia");
-    const data_nasc = document.getElementById("data_nasc");
+    const dataNascimento = document.getElementById("dataNascimento");
     const AutorId= document.getElementById("AutorId");
     nome.value = Autor.nome;
     biografia.value = Autor.biografia;
-    data_nasc.value = new Date(Autor.data_nasc).toISOString().split('T')[0];
+    dataNascimento.value = new Date(Autor.dataNascimento).toISOString().split('T')[0];
     AutorId.value = Autor.id;
     addBookBtn.click();
 /**/
@@ -67,12 +67,12 @@ function editarAutor(Autor) {
 function limparFormulario(){
     const nome= document.getElementById("nome");
     const biografia = document.getElementById("biografia");
-    const data_nasc = document.getElementById("data_nasc");
+    const dataNascimento = document.getElementById("dataNascimento");
     const AutorId= document.getElementById("AutorId");
 
     nome.value = "";
     biografia.value = "";
-    data_nasc.value = "";
+    dataNascimento.value = "";
     AutorId.value = "";
 }
 
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const nome= document.getElementById("nome").value;
         const biografia = document.getElementById("biografia").value;
-        const data_nasc = document.getElementById("data_nasc").value;
+        const dataNascimento = document.getElementById("dataNascimento").value;
         const AutorId= document.getElementById("AutorId").value;
 
         let methodSalvar = "POST";
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ nome, biografia, data_nasc })
+            body: JSON.stringify({ nome, biografia, dataNascimento })
         })
         .then(res => {
             if (res.ok && res.status == "201") return res.json();
